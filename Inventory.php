@@ -23,7 +23,7 @@
         $USER_ID = $_SESSION['USER_ID'];
         $materials = $itemsView->viewInventory($USER_ID);
         $lowstockCount = $itemsView->viewLowStockCount($USER_ID);
-        $outofstockCount = $itemsView->viewOutOfStockCount($USER_ID)
+        $outofstockCount = $itemsView->viewOutOfStockCount($USER_ID);
     ?>
 
     <!--Main Body for Inventory Page, 2 Columns-->

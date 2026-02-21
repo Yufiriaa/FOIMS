@@ -56,18 +56,6 @@ class ItemsCntrl extends Items {
         );
     }
 
-    // Update Reservation
-    public function updateReservation($reservationID, $quantity, $requestor, $purpose, $claimingDate) {
-
-        return $this->updateReservationDB(
-            $reservationID,
-            $quantity,
-            $requestor,
-            $purpose,
-            $claimingDate
-        );
-    }
-
     // Update Reservation Status
     public function updateReservationStatus($reservationID, $status) {
 

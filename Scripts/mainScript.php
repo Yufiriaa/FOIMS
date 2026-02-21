@@ -26,6 +26,9 @@
         const moTable = document.querySelector("#myorganizationTable");
         if (moTable) new simpleDatatables.DataTable(moTable, tableOptions);
 
+        // User Role from PHP Session
+        const userRole = "<?= $_SESSION['ROLE']; ?>"; // PHP → JS
+
         //Modal Functions Scripts
         //update & Delete
         const showUpdate = document.getElementById('showUpdateModal');
@@ -51,7 +54,8 @@
         const showOrganizationcon = document.getElementById('showorganizationTable');
         const OrganizationTablecon = document.getElementById('organizationTablecon');
         const showMyOrganizationCon = document.getElementById('showmyorganizationTable');
-        const myOrganizationTableCon = document.getElementById('myorganizationTablecon');
+        const myOrganizationTableConOWNER = document.getElementById('myorganizationTableconOWNER');
+        const myOrganizationTableConMEMBER = document.getElementById('myorganizationTableconMEMBER');
 
         //update & Delete Functions
         if (showUpdate && updateModal) {
@@ -99,11 +103,14 @@
         }
 
         // Organization Tables Functions
-        if (showOrganizationcon && OrganizationTablecon && myOrganizationTableCon) {
+        if (showOrganizationcon && myOrganizationTableConMEMBER && myOrganizationTableConOWNER && OrganizationTablecon) {
             showOrganizationcon.addEventListener('click', () => {
+
                 // show organization table, hide my organization
                 OrganizationTablecon.classList.remove('hidden');
-                myOrganizationTableCon.classList.add('hidden');
+                myOrganizationTableConMEMBER.classList.add('hidden');
+                myOrganizationTableConOWNER.classList.add('hidden');
+
 
                 // visual active state on buttons
                 showOrganizationcon.classList.add('text-white');
@@ -111,10 +118,19 @@
             });
         }
 
-        if (showMyOrganizationCon && myOrganizationTableCon && OrganizationTablecon) {
+        if (showMyOrganizationCon && myOrganizationTableConMEMBER && myOrganizationTableConOWNER && OrganizationTablecon) {
             showMyOrganizationCon.addEventListener('click', () => {
+
                 // show my organization, hide organization
-                myOrganizationTableCon.classList.remove('hidden');
+                // Check Role to show appropriate my organization table
+                if (userRole === 'MEMBER') {
+                    myOrganizationTableConMEMBER.classList.remove('hidden');
+                    myOrganizationTableConOWNER.classList.add('hidden'); // hide OWNER table
+                } else {
+                    myOrganizationTableConOWNER.classList.remove('hidden');
+                    myOrganizationTableConMEMBER.classList.add('hidden'); // hide MEMBER table
+                }
+
                 OrganizationTablecon.classList.add('hidden');
 
                 // visual active state on buttons

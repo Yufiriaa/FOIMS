@@ -50,9 +50,16 @@ class UsersCntrl extends Users {
         // SUCCESS
         session_regenerate_id();
 
+
         $_SESSION['USER_ID'] = $user['USER_ID'];
         $_SESSION['NAME'] = $user['NAME'];
         $_SESSION['EMAIL'] = $user['EMAIL'];
+
+        if($this->getRole($user['USER_ID'])){
+            $_SESSION['ROLE'] = "OWNER";
+        } else{
+            $_SESSION['ROLE'] = "MEMBER";
+        }
 
         return true;
     }

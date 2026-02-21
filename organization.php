@@ -212,7 +212,7 @@
             </div>
 
             <!--My Organization Tables-->
-            <div id="myorganizationTablecon" class="hidden h-full w-full px-5">
+            <div id="myorganizationTableconOWNER" class="hidden h-full w-full px-5">
 
                 <table id="myorganizationTable" class="table-auto bg-[C7CFBE] border-separate border h-fit max-h-full">
                     <thead>
@@ -311,6 +311,11 @@
                     </tbody>
                 </table>
 
+            </div>
+
+            <!--No Access Message-->
+            <div id="myorganizationTableconMEMBER" class="hidden w-full h-full flex justify-center items-center">
+                <h1  class="text-xl font-bold">You must be an owner to view this page.</h1>
             </div>
 
         </div>
