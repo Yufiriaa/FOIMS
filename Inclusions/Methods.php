@@ -20,8 +20,7 @@
         if (
             isset($_SESSION['InventoryMessage']) || isset($_SESSION['InventoryMessageSuccess']) ||
             isset($_SESSION['ReservationMessage']) || isset($_SESSION['ReservationMessageSuccess']) ||
-            isset($_SESSION['DistributionMessage']) || isset($_SESSION['DistributionMessageSuccess']) ||
-            isset($_SESSION['OrganizationMessage']) || isset($_SESSION['OrganizationMessageSuccess'])
+            isset($_SESSION['DistributionMessage']) || isset($_SESSION['DistributionMessageSuccess'])
         ) {
             echo '<div id="flashMessageBox" class="w-md p-3 text-md bg-[C7CFBE] shadow-md font-bold flex justify-center items-center place-self-center text-center">';
             flashError('InventoryMessage');
@@ -30,8 +29,6 @@
             flashSuccess('ReservationMessageSuccess');
             flashError('DistributionMessage');
             flashSuccess('DistributionMessageSuccess');
-            flashError('OrganizationMessage');
-            flashSuccess('OrganizationMessageSuccess');
             echo '</div>
             <script>
                 setTimeout(function() {

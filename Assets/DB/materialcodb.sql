@@ -47,57 +47,6 @@ INSERT INTO `inventory` (`MATERIAL_ID`, `USER_ID`, `MATERIAL_NAME`, `QUANTITY`, 
 
 -- --------------------------------------------------------
 
---
--- Table structure for table `members`
---
-
-CREATE TABLE `members` (
-  `MEMBER_ID` int(11) NOT NULL,
-  `USER_ID` int(11) NOT NULL,
-  `ORGANIZATION_ID` int(11) NOT NULL,
-  `REMARKS` varchar(255) NOT NULL,
-  `DATE_JOINED` datetime NOT NULL DEFAULT current_timestamp(),
-  `IS_ACTIVE` tinyint(1) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `members`
---
-
-INSERT INTO `members` (`MEMBER_ID`, `USER_ID`, `ORGANIZATION_ID`, `REMARKS`, `DATE_JOINED`, `IS_ACTIVE`) VALUES
-(1, 8, 3, 'adios', '0000-00-00 00:00:00', 0),
-(2, 8, 3, 'adios', '2026-01-17 09:34:08', 0),
-(3, 8, 3, 'adios', '2026-01-17 09:58:20', 0),
-(4, 8, 3, 'adios', '2026-01-17 09:58:23', 0),
-(5, 8, 3, 'adios', '2026-01-17 09:58:25', 0),
-(6, 8, 3, 'adios', '2026-01-17 09:58:27', 0);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `organizations`
---
-
-CREATE TABLE `organizations` (
-  `ORGANIZATION_ID` int(11) NOT NULL,
-  `USER_ID` int(11) NOT NULL,
-  `NAME` varchar(255) NOT NULL,
-  `ADDRESS` text DEFAULT NULL,
-  `TYPE` varchar(100) DEFAULT NULL,
-  `CREATED_AT` datetime DEFAULT current_timestamp(),
-  `IS_ACTIVE` tinyint(1) NOT NULL DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `organizations`
---
-
-INSERT INTO `organizations` (`ORGANIZATION_ID`, `USER_ID`, `NAME`, `ADDRESS`, `TYPE`, `CREATED_AT`, `IS_ACTIVE`) VALUES
-(1, 8, 'Test 1', 'Blank 2', 'School', '2026-01-14 16:38:16', 1),
-(2, 10, 'yash', '123', 'scool', '2026-01-16 12:34:09', 1),
-(3, 8, 'tes1', 'blank', 'school', '2026-01-17 08:48:03', 1);
-
--- --------------------------------------------------------
 
 --
 -- Table structure for table `reservation`
@@ -184,21 +133,6 @@ ALTER TABLE `inventory`
   ADD KEY `fk_inventory_user` (`USER_ID`);
 
 --
--- Indexes for table `members`
---
-ALTER TABLE `members`
-  ADD PRIMARY KEY (`MEMBER_ID`),
-  ADD KEY `USER_ID` (`USER_ID`),
-  ADD KEY `ORGANIZATION_ID` (`ORGANIZATION_ID`);
-
---
--- Indexes for table `organizations`
---
-ALTER TABLE `organizations`
-  ADD PRIMARY KEY (`ORGANIZATION_ID`),
-  ADD KEY `USER_ID` (`USER_ID`);
-
---
 -- Indexes for table `reservation`
 --
 ALTER TABLE `reservation`
@@ -229,18 +163,6 @@ ALTER TABLE `inventory`
   MODIFY `MATERIAL_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 
 --
--- AUTO_INCREMENT for table `members`
---
-ALTER TABLE `members`
-  MODIFY `MEMBER_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `organizations`
---
-ALTER TABLE `organizations`
-  MODIFY `ORGANIZATION_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
 -- AUTO_INCREMENT for table `reservation`
 --
 ALTER TABLE `reservation`
@@ -267,19 +189,6 @@ ALTER TABLE `user`
 --
 ALTER TABLE `inventory`
   ADD CONSTRAINT `fk_inventory_user` FOREIGN KEY (`USER_ID`) REFERENCES `user` (`USER_ID`) ON DELETE SET NULL ON UPDATE CASCADE;
-
---
--- Constraints for table `members`
---
-ALTER TABLE `members`
-  ADD CONSTRAINT `members_ibfk_1` FOREIGN KEY (`USER_ID`) REFERENCES `user` (`USER_ID`),
-  ADD CONSTRAINT `members_ibfk_2` FOREIGN KEY (`ORGANIZATION_ID`) REFERENCES `organizations` (`ORGANIZATION_ID`);
-
---
--- Constraints for table `organizations`
---
-ALTER TABLE `organizations`
-  ADD CONSTRAINT `organizations_ibfk_1` FOREIGN KEY (`USER_ID`) REFERENCES `user` (`USER_ID`);
 
 --
 -- Constraints for table `reservation`

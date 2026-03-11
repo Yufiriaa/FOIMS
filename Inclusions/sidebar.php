@@ -16,11 +16,6 @@
                 <i class="fa fa-dashboard"></i>
                 <span class="font-medium">Dashboard</span>
             </a>
-
-            <a href="./organization.php" class="flex items-center gap-3 p-2 rounded-md hover:bg-gray-200 transition-all duration-200">
-                <i class="fa fa-sitemap" aria-hidden="true"></i>
-                <span class="font-medium">Organization</span>
-            </a>
         </div>
     </div>
 

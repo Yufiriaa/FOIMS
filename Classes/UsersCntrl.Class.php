@@ -55,11 +55,7 @@ class UsersCntrl extends Users {
         $_SESSION['NAME'] = $user['NAME'];
         $_SESSION['EMAIL'] = $user['EMAIL'];
 
-        if($this->getRole($user['USER_ID'])){
-            $_SESSION['ROLE'] = "OWNER";
-        } else{
-            $_SESSION['ROLE'] = "MEMBER";
-        }
+        $_SESSION['ROLE'] = "OWNER";
 
         return true;
     }

@@ -28,16 +28,4 @@ class Users extends Dbh {
 
         return true;
     }
-
-    // Check if the role is an organization owner
-    protected function getRole($userID) {
-        $query = "SELECT 1 FROM organizations WHERE USER_ID = ? LIMIT 1 ";
-        $stmt = $this->connection()->prepare($query);
-
-        if (!$stmt->execute([$userID])) {
-            return false;
-        }
-
-        return $stmt->fetchColumn() !== false;
-    }
 }
