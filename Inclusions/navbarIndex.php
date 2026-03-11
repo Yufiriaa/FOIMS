@@ -16,7 +16,7 @@
         </div>
         <div id="contact" class="hidden">
             <h2 class="font-bold text-lg mb-2">Contact Us</h2>
-            <p>Email: info@materialsco.com | Phone: +1 (555) 123-4567 | Address: 123 Materials St, City, State</p>
+            <p>Email: info@foims.com | Phone: +1 (555) 123-4567 | Address: 123 Materials St, City, State</p>
         </div>
         <div id="faq" class="hidden">
             <h2 class="font-bold text-lg mb-2">FAQs</h2>
@@ -24,7 +24,7 @@
         </div>
         <div id="about" class="hidden">
             <h2 class="font-bold text-lg mb-2">About Us</h2>
-            <p>MaterialsCo is a leading supplier of quality materials. Founded in 2020, we serve thousands of customers with reliable service and competitive pricing.</p>
+            <p>FOIMS is a leading supplier of quality materials. Founded in 2020, we serve thousands of customers with reliable service and competitive pricing.</p>
         </div>
     </div>
 </div>

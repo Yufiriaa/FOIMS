@@ -112,18 +112,6 @@ CREATE TABLE `user` (
   `PASSWORD` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`USER_ID`, `NAME`, `EMAIL`, `PASSWORD`) VALUES
-(8, 'Joseph Mejos', 'Xzilleon2@gmail.com', '$2y$10$oLhAU413PYYlc3FWdQA03OqK3DOtKuq9tepTaEhHiWWcugluyE0tS'),
-(9, 'Joseph Mejos', 'Nizarech@gmail.com', '$2y$10$XKOYpb9Xv7w8cjKUr9i3FumfL7IFsjTwdUVO7QtFyw7dpwTJpQ/D.'),
-(10, 'alviliango', 'goalvilian@gmail.com', '$2y$10$pDz3fTaZ5k2SgURLMOWjcOp6XwNFgcq2FNdvgcfnxmqUZXNuDHidW');
-
---
--- Indexes for dumped tables
---
 
 --
 -- Indexes for table `inventory`

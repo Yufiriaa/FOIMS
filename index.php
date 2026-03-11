@@ -11,8 +11,8 @@
     
     <nav class="flex items-center justify-between px-6 md:px-20 py-5 bg-[#D0DACA] border-b border-[#1F2933]/10">
         <div class="flex items-center space-x-1">
-            <img class="h-10 w-10" src="./Assets/Icons/MaterialsCo_Logo.svg" alt="">
-            <span class="text-2xl font-bold text-[#1F2933]">MaterialsCo</span>
+            <img class="h-10 w-10" src="./Assets/Icons/MaterialsCo_Logo.svg" alt="FOIMS logo">
+            <span class="text-2xl font-bold text-[#1F2933]">FOIMS</span>
         </div>
         <div class="hidden md:flex space-x-8 font-medium">
             <a href="#Home" class="hover:opacity-70">Home</a>
@@ -126,7 +126,7 @@
 
     <section id="Features" class="py-16 px-6 md:px-20 text-center">
         <h2 class="text-3xl font-bold max-w-xl mx-auto">Manage your entire community in a single system</h2>
-        <p class="text-[#1F2933]/70 mt-3">Who is MaterialsCo suitable for?</p>
+        <p class="text-[#1F2933]/70 mt-3">Who is FOIMS suitable for?</p>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mt-12">
             <div class="p-8 bg-[#C7CFBE] shadow-sm rounded-xl border border-[#1F2933]/20 hover:shadow-md transition">
@@ -166,7 +166,7 @@
 
     <section id="Demo" class="py-20 text-center">
         <h2 class="text-4xl md:text-5xl font-bold max-w-2xl mx-auto leading-tight">
-            Start your journey with MaterialsCo today.
+            Start your journey with FOIMS today.
         </h2>
         <button class="mt-8 bg-[#1F2933] text-[#D0DACA] px-8 py-4 rounded-md font-bold uppercase tracking-widest hover:opacity-90 cursor-pointer">
             Get a Demo
@@ -177,8 +177,8 @@
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
             <div class="space-y-6">
                 <div class="flex items-center space-x-1">
-                    <img class="h-10 w-10" src="./Assets/Icons/MaterialsCo_Logo.svg" alt="">
-                    <span class="text-2xl font-bold">MaterialsCo</span>
+                    <img class="h-10 w-10" src="./Assets/Icons/MaterialsCo_Logo.svg" alt="FOIMS logo">
+                    <span class="text-2xl font-bold">FOIMS</span>
                 </div>
                 <p class="text-sm opacity-70">Copyright © 2026 Nexcent ltd. <br>Inventory Management System</p>
             </div>

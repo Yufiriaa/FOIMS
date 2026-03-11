@@ -4,8 +4,8 @@
     <!-- Logo -->
     <div class="my-3">
         <p class="flex justify-center items-center rounded-md">
-            <img class="h-25 " src="./Assets/Icons/MaterialsCo_Logo.png" alt="Logo">
-            <h1 class="text-center text-lg font-bold">MaterialsCo</h1>
+            <img class="h-25 " src="./Assets/Icons/MaterialsCo_Logo.png" alt="FOIMS logo">
+            <h1 class="text-center text-lg font-bold">FOIMS</h1>
         </p>
     </div>
     

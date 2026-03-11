@@ -6,7 +6,7 @@ class Dbh {
     private $host = "localhost";
     private $user = "root";
     private $pass = "";
-    private $db = "materialcodb";
+    private $db = "foimsdb";
     private $conn;
 
     // Methods for connection

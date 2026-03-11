@@ -395,6 +395,3 @@ class Items extends Dbh {
     }
 
 }
-
-
-}
